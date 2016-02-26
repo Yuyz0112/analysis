@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>hello</h1>
+	<script src = "https://cdn.wilddog.com/js/client/current/wilddog.js" ></script>
+	<script>
+		var ref = new Wilddog('https://analysis.wilddogio.com/');
+		ref.onAuth(function() {
+			
+		});
+
+		ref.authWithPassword({
+			email: '569812520@qq.com',
+			password: 'yu2001'
+		}, function(){
+			var authData = ref.getAuth();
+			console.log(authData)
+			document.querySelector('h1').innerText = authData.uid
+		});
+	</script>
+</body>
+</html>

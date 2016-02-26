@@ -1,0 +1,120 @@
+<!-- @@include('header.html') -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link type="text/css" rel="stylesheet" href="css/ghpages-materialize.min.css"  media="screen,projection"/>
+		<style>
+			@media only screen and (min-width: 993px){
+				#signIn,#signUp {
+					margin-left:25%;
+				}
+			}
+			.buttons {
+				margin: 1em auto;
+			}
+			.label{
+				color:#9e9e9e;
+				text-indent: .75em;
+			}
+			#tabs,#tab1,#tab2{
+				margin:0 auto;
+				float: none;
+			}
+			#main{
+				padding-top:10%;
+			}
+			#tab2{
+				display:none;
+			}
+			.card h5{
+				padding-top:1em;
+			}
+		</style>
+	</head>
+	<body>
+		<!--header-->
+		<header>
+			<nav>
+				<div class="nav-wrapper">
+					<a href="#!" class="brand-logo">Logo</a>
+					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="#">首页</a></li>
+						<li><a href="#">功能特性</a></li>
+						<li><a href="#">登陆/注册</a></li>
+					</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<li><a href="#">首页</a></li>
+						<li><a href="#">功能特性</a></li>
+						<li><a href="#">登陆/注册</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!--main part-->
+		<main>
+			<div class="container row" id="main">
+				<h3>Cong!</h3>
+				<p>Your uid is : <span id="uid"></span></p>
+				<div class="col s12 center-align">
+						<button class="btn" id="exit">退出</button>
+				</div>
+				<div class="card hoverable col s12 l6 center-align clearfix" id="tab2">
+					<h5 class="indigo-text lighten-2">请补充资料</h5>
+					<form class="col s12 l6" id="signUp">
+						<div class="input-field">
+							<input type="email" class="validate" id="newEmail">
+							<label for="newEmail">联系邮箱</label>
+						</div>
+						<div class="input-field">
+							<input type="text" class="validate" id="company">
+							<label for="company">公司名称</label>
+						</div>
+						<div class="input-field">
+							<input type="text" class="validate" id="username">
+							<label for="username">昵称</label>
+						</div>
+						<div class="input-field">
+							<select multiple>
+								<option value="" disabled selected>请选择</option>
+								<option value="1">游戏</option>
+								<option value="2">影视</option>
+								<option value="3">综艺</option>
+								<option value="4">动漫</option>
+								<option value="5">文学</option>
+								<option value="6">艺术</option>
+								<option value="7">其他</option>
+							</select>
+							<label>您从事的领域</label>
+						</div>
+						<p class="label">您了解我们的渠道</p>
+						<p>
+							<input name="infoFrom" type="radio" id="friend" class="with-gap" checked/>
+							<label for="friend">朋友介绍</label>
+							<input name="infoFrom" type="radio" id="web" class="with-gap" />
+							<label for="web">网络信息</label>
+						</p>
+					</form>
+					<div class="col s12 center-align">
+						<button class="btn buttons" id="regist">提交资料</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--footer-->
+		
+		<script src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script src = "https://cdn.wilddog.com/js/client/current/wilddog.js" ></script>
+		<script>
+			$(document).ready(function() {
+				$(".button-collapse").sideNav();
+				$('select').material_select();
+			});
+		</script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
